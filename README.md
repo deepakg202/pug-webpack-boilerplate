@@ -15,7 +15,7 @@
 ### Note:-
 	- Static Files (ie. images, js, css, etc) are served directly from the `public` folder
 	- Change bootstrap variables in `src/custom.scss`
-	- To create new html files create `[filename].twig` in src folder and add `[filename]` in the array in `src/filenames.js`
+	- To develop a new page create `[filename].twig` in src folder and add `[filename]` in the array in `src/filenames.js`
 
 ### Commands:-
 	`npm run dev`: Runs the development server
