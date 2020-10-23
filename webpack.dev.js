@@ -7,7 +7,7 @@
      mode: 'development',
      devtool: 'inline-source-map',
      devServer: {
-         contentBase: path.join(__dirname, "src"),
+         contentBase: path.join(__dirname, "public"),
          port: 3000,
 	     hot: true,
      },

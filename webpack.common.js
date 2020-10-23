@@ -4,30 +4,38 @@ const {
 } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+const files = require('./src/filenames.js');
+
 module.exports = {
 
-    //HTMLWebPack
-    entry: {
-        app: './src/index.js',
-    },
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            title: 'Ping Pong Bots',
-            template: './src/index.twig',
-        }),
+        
+        ...files.map((name) => new HtmlWebpackPlugin({
+            template: `./src/${name}.twig`,
+            filename: `${name}.html`
+        })),
+        
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
             chunkFilename: "css/[id].css"
+        }),
+
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'public' }
+            ]
         })
     ],
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'build')
+        filename: 'js/[name].bundle.js',
+        path: path.resolve(__dirname, 'build'),
     },
 
 
-    //Twig Template Engine
+    //Twig Template Engine and Sass loader
     module: {
         rules: [{
             test: /\.twig$/,
