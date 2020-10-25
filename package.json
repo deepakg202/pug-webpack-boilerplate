@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
-    "dev": "webpack serve --config webpack.dev.js"
+    "dev": "webpack serve --config webpack.dev.js",
+    "deploy-gh": "git push origin :gh-pages && git subtree push --prefix build origin gh-pages"
+
   },
   "author": "",
   "license": "ISC",
