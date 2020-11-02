@@ -8,13 +8,14 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const files = require('./src/filenames.js');
 
+
 module.exports = {
 
     plugins: [
         new CleanWebpackPlugin(),
         
         ...files.map((name) => new HtmlWebpackPlugin({
-            template: `./src/${name}.twig`,
+            template: `./src/${name}.pug`,
             filename: `${name}.html`
         })),
         
@@ -38,9 +39,9 @@ module.exports = {
     //Twig Template Engine and Sass loader
     module: {
         rules: [{
-            test: /\.twig$/,
+            test: /\.pug$/,
             use: {
-                loader: 'twig-loader',
+                loader: 'pug-loader',
                 options: {},
             }
         }, {

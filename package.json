@@ -6,8 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "deploy-gh": "git push origin :gh-pages && git subtree push --prefix build origin gh-pages"
-
+    "deploy-gh": "npm run build && git add build -f && git push origin :gh-pages || true && git subtree push --prefix build origin gh-pages && git rm -r --cached build"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +18,8 @@
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.1.2",
     "path": "^0.12.7",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
     "twig": "^1.15.2",
