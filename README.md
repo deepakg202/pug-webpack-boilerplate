@@ -6,6 +6,7 @@
 	- Customizable Bootstrap (with SCSS)
 	- Pug Template Engine
 	- Configurable Webpack
+	- Removes unused css using `purgecss`
 	- Deploy to Github Pages with one command
 
 ### Instructions:-

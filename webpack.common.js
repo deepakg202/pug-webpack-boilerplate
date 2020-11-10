@@ -5,7 +5,8 @@ const {
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob');
 const files = require('./src/filenames.js');
 
 
@@ -23,7 +24,9 @@ module.exports = {
             filename: "css/[name].css",
             chunkFilename: "css/[id].css"
         }),
-
+        new PurgecssPlugin({
+              paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`,  { nodir: true }),
+        }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'public' }
