@@ -1,4 +1,4 @@
-# NodeJs Web Page Boilerplate
+# Webpack Frontend Boilerplate
 
 ## Boilerplate to develop and maintain static web pages faster and efficiently
 
