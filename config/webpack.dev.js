@@ -8,7 +8,7 @@ module.exports = merge(common, {
   devServer: {
     contentBase: constants.PUBLIC_DIR,
     port: constants.PORT,
-    hot: true,
+    inline: true,
     compress: true
   },
 });

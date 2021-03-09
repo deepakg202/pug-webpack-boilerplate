@@ -32,7 +32,9 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: constants.PUBLIC_DIR }
+                { from: constants.PUBLIC_DIR,
+                  noErrorOnMissing: true
+                }
             ]
         }),
         new ESLintPlugin()

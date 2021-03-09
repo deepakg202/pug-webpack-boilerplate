@@ -1,22 +1,12 @@
-header
-  nav.navbar.navbar-dark.bg-dark.fixed-top
-    .container
-      span.navbar-brand.mb-0.h1 Deepak Gupta
-      .navbar-nav.ml-auto
-        .nav-item
-          a.nav-link(href='#projects') Projects
+nav.navbar.navbar-expand.navbar-dark.bg-success
+  .container
+    a.navbar-brand(href='/') Pug Webpack Boilerplate
+    button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+          li.nav-item
+            a.nav-link(href='/features.html') Features
+          li.nav-item
+            a.nav-link(href='https://github.com/deepakgupta191199/pug-webpack-boilerplate') Source
 
-script.
-  const links = document.querySelectorAll(".nav-link");
-  for (const link of links) {
-    link.addEventListener("click", clickHandler);
-  }  
-  function clickHandler(e) {
-    e.preventDefault();
-    const href = this.getAttribute("href");
-    const offsetTop = document.querySelector(href).offsetTop - 40;
-    scroll(
-    top: offsetTop,
-    behavior: "smooth"
-    });
-  }
