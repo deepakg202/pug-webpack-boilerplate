@@ -1,0 +1,37 @@
+mixin card(title, subtitle, link, image)
+  .col.col-xs-12.col-md-6.col-lg-4.py-3
+    .card.shadow-lg.rounded.h-100
+      img.card-img-top(src=image).halfCard-img.img-fluid.p-2
+      .card-body
+        .card-text.p-3
+          .card-title
+            h2.py-2= title
+            p= subtitle
+          a.btn.btn-outline-primary(href=link target="_blank").mt-4 Source Code
+
+
+
+section.py-4#projects
+  .container
+    h1.text-center.heading My Projects
+    .row
+      +card('Blogging Site', 'Blog Based Site Made in LAMP Stack', 'https://github.com/deepakgupta191199/Intragram', 'https://www.unixmen.com/wp-content/uploads/2014/01/lamp-server.png')
+      +card('Python Media Player', 'Media Player Made in Python, Gtk And GStreamer', 'https://github.com/deepakgupta191199/PyGObject-Player', 'https://news-cdn.softpedia.com/images/news2/GTK-3-9-8-Brings-Major-Changes-in-Preparation-for-GTK-4-2.jpg')
+      +card('Flutter Blog App', 'Blog App Made in Flutter and Firebase RTDB', 'https://github.com/deepakgupta191199/FlutterFirebaseBlogApp', 'https://bloghugocoutinho.files.wordpress.com/2019/10/google-dart-flutter.png?w=723')
+      +card('Qr Code and Motion Detection', 'Qr Code And Motion Detection using OpenCV and Zbar in C++','https://github.com/deepakgupta191199/qrcode-scanner', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png')
+      
+      .col.col-xs-12.col-md-6.col-lg-4.py-3
+        .card.shadow-lg.rounded.h-100
+          img.card-img-top(src="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?size=626&ext=jpg").halfCard-img.img-fluid
+          .card-body
+            .card-text.p-3
+              .card-title
+                h2.py-2 More Projects
+                p Coming Soon
+              a.btn.btn-primary(href="https://github.com/deepakgupta191199" target="_blank").mt-4 See Profile
+
+style.
+  .halfCard-img
+  {
+    width: 100%;
+  }

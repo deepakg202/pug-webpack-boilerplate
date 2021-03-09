@@ -1,33 +1,27 @@
-# Webpack Frontend Boilerplate
-
-## Boilerplate to develop and maintain static web pages faster and efficiently
+# Pug Webpack Boilerplate
 
 ### Features:-
-	- Customizable Bootstrap (with SCSS)
-	- Pug Template Engine
-	- Configurable Webpack
-	- Removes unused css using `purgecss`
-	- Deploy to Github Pages with one command
+
+- Configurable Webpack
+- SCSS and PostCSS
+- Pug Template Engine
+- Removes unused css using `purgecss`
+- Deploy to Github Pages with one command using `gh-pages` package
 
 ### Instructions:-
-	- clone this repo
-	- remove the `.git` folder (Make sure you can see hidden files and folders)
-	- Execute `git init` and set git accordingly or simply copy the `.git` folder of your repo
-	- Execute `npm init` and change `package.json` accordingly
-	- Execute `npm install`
+
+- Clone this repo or click on `Use This Template`
+- Execute `yarn install`
+- Execute `yarn run serve` to run dev server at `localhost:8080`
 
 ### Commands:-
-	`npm run dev`: Runs the development server at localhost:3000
-	`npm run build`: Builds the file in /build
-	`npm run deploy-gh`: Builds the file and pushes it to `gh-pages` branch of your repo 
+
+`yarn run serve`: Runs the development server at localhost:8080
+`yarn run build`: Builds the pages in /dist
+`yarn run deploy-gh`: Builds and pushes it to `gh-pages` branch
 
 ### Note:-
-	- Static Files (ie. images, js, css, etc) are served directly from the `public` folder
-	- Change bootstrap variables in `src/custom.scss`
-	- To develop a new page create `[filename].twig` in src folder and add `[filename]` in the array in `src/filenames.js`
-	- Clicking on Anchor elements will not refresh the page (For Single Page Experience). For default behaviour, you can add `classic="yes"` attribute in anchor tags or you can change `index.js`.
 
-
-
----
----
+- Static Files (ie. images and other third-party js, css etc) are served directly from the `public` folder and can be used directly
+- Customize bootstrap or use any other scss framework in `src/scss/_framework.scss`
+- To develop a new page just create a new`.pug` file in `src/pages` directory and re-run the dev server. It is somewhat similar to other static site generators like nuxtjs

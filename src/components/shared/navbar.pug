@@ -1,0 +1,22 @@
+header
+  nav.navbar.navbar-dark.bg-dark.fixed-top
+    .container
+      span.navbar-brand.mb-0.h1 Deepak Gupta
+      .navbar-nav.ml-auto
+        .nav-item
+          a.nav-link(href='#projects') Projects
+
+script.
+  const links = document.querySelectorAll(".nav-link");
+  for (const link of links) {
+    link.addEventListener("click", clickHandler);
+  }  
+  function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href).offsetTop - 40;
+    scroll(
+    top: offsetTop,
+    behavior: "smooth"
+    });
+  }
