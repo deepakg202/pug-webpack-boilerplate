@@ -1,0 +1,23 @@
+<!doctype html><html><head><title>Deepak Gupta</title><link href="css/main.css" rel="stylesheet"></head><body><header><nav class="navbar navbar-dark bg-dark fixed-top"><div class="container"><span class="navbar-brand mb-0 h1">Deepak Gupta</span><div class="navbar-nav ml-auto"><div class="nav-item"><a class="nav-link" href="#projects">Projects</a></div></div></div></nav></header><script>const links = document.querySelectorAll(".nav-link");
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}  
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop - 40;
+  scroll(
+  top: offsetTop,
+  behavior: "smooth"
+  });
+}</script><section class="bg-dark" id="landing"><div class="container d-flex flex-column text-white justify-content-center align-items-center h-100"><img class="rounded-circle mb-4" src="images/avataaars.svg" alt="profile"><h1 class="text-uppercase">Deepak Gupta</h1><a class="btn btn-primary mt-4" href="https://github.com/deepakgupta191199">Github Profile</a></div></section><style>#landing
+{
+  height: 100vh;
+  width: 100%;
+  background-image: url(images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}</style><section class="py-4" id="projects"><div class="container"><h1 class="text-center heading">My Projects</h1><div class="row"><div class="col col-xs-12 col-md-6 col-lg-4 py-3"><div class="card shadow-lg rounded h-100"><img class="card-img-top halfCard-img img-fluid p-2" src="https://www.unixmen.com/wp-content/uploads/2014/01/lamp-server.png"><div class="card-body"><div class="card-text p-3"><div class="card-title"><h2 class="py-2">Blogging Site</h2><p>Blog Based Site Made in LAMP Stack</p></div><a class="btn btn-outline-primary mt-4" href="https://github.com/deepakgupta191199/Intragram" target="_blank">Source Code</a></div></div></div></div><div class="col col-xs-12 col-md-6 col-lg-4 py-3"><div class="card shadow-lg rounded h-100"><img class="card-img-top halfCard-img img-fluid p-2" src="https://news-cdn.softpedia.com/images/news2/GTK-3-9-8-Brings-Major-Changes-in-Preparation-for-GTK-4-2.jpg"><div class="card-body"><div class="card-text p-3"><div class="card-title"><h2 class="py-2">Python Media Player</h2><p>Media Player Made in Python, Gtk And GStreamer</p></div><a class="btn btn-outline-primary mt-4" href="https://github.com/deepakgupta191199/PyGObject-Player" target="_blank">Source Code</a></div></div></div></div><div class="col col-xs-12 col-md-6 col-lg-4 py-3"><div class="card shadow-lg rounded h-100"><img class="card-img-top halfCard-img img-fluid p-2" src="https://bloghugocoutinho.files.wordpress.com/2019/10/google-dart-flutter.png?w=723"><div class="card-body"><div class="card-text p-3"><div class="card-title"><h2 class="py-2">Flutter Blog App</h2><p>Blog App Made in Flutter and Firebase RTDB</p></div><a class="btn btn-outline-primary mt-4" href="https://github.com/deepakgupta191199/FlutterFirebaseBlogApp" target="_blank">Source Code</a></div></div></div></div><div class="col col-xs-12 col-md-6 col-lg-4 py-3"><div class="card shadow-lg rounded h-100"><img class="card-img-top halfCard-img img-fluid p-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png"><div class="card-body"><div class="card-text p-3"><div class="card-title"><h2 class="py-2">Qr Code and Motion Detection</h2><p>Qr Code And Motion Detection using OpenCV and Zbar in C++</p></div><a class="btn btn-outline-primary mt-4" href="https://github.com/deepakgupta191199/qrcode-scanner" target="_blank">Source Code</a></div></div></div></div><div class="col col-xs-12 col-md-6 col-lg-4 py-3"><div class="card shadow-lg rounded h-100"><img class="card-img-top halfCard-img img-fluid" src="https://img.freepik.com/free-vector/neon-style-coming-soon-glowing-background-design_1017-25516.jpg?size=626&amp;ext=jpg"><div class="card-body"><div class="card-text p-3"><div class="card-title"><h2 class="py-2">More Projects</h2><p>Coming Soon</p></div><a class="btn btn-primary mt-4" href="https://github.com/deepakgupta191199" target="_blank">See Profile</a></div></div></div></div></div></div></section><style>.halfCard-img
+{
+  width: 100%;
+}</style><footer><div class="bg-dark text-center py-3 text-white">Made by Deepak Gupta</div></footer><script src="js/main.bundle.js"></script></body></html>
